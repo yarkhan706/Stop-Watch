@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+body{
+    background-color: #f2e5dd; ;
+}
 
 
 .container{
@@ -12,11 +15,14 @@
     left: 50%;
     transform: translate(-50%,-50%);
     border: solid 1px;
-    padding: 10%;
+    border-radius: 9px;
+    padding: 5%;
     display: grid;
     grid-template-areas: 
     "time time time"
-    "start pause reset";
+    "startbtn pause reset";
+    gap: 5px;
+    background-color: #96904e;
 
 }
 
@@ -25,9 +31,70 @@
     font-size: 4rem;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    color: #f2e5dd;
 }
 
+#startbtn{
+    grid-area: startbtn;
+
+}
+#pausebtn{
+    grid-area: pause;
+}
+#resetbtn{
+    grid-area: reset;
+}
+
+#startbtn:hover{
+    cursor: pointer;
+    border-radius: 4px;
+    border-bottom: #f2e5dd 1px solid;
+    box-shadow: 0px 0px 1px 1px #6a7643;
+    transition: all 0.2s;
+}
+#pausebtn:hover{
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0px 0px 1px 1px #6a7643;
+    border-bottom: #f2e5dd 1px solid;
+    transition: all 0.2s;
+}
+#resetbtn:hover{
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px 1px #6a7643;
+    border-bottom: #f2e5dd 1px solid;
+    transition: all 0.2s;
+}
+
+*::selection{
+ color: #f2e5dd;
+ background-color: #6a7643;
+}
+
+
+
 .btn{
-    border: 1px solid;
+    border: 1px solid #96904e;
     padding: 10px;
+    box-shadow: 0px 0px 8px 1px #6a7643;
+    background-color: #96904e;
+    color: #f2e5dd;
+    font-weight: 500;
+}
+
+@media screen and (max-width:768px) {
+
+    .container{
+        padding: auto;
+    }
+
+    .time{
+        font-size: 50px;
+    }
+    .btn{
+        padding: 4px;
+        font-size: 15px;
+    }
+    
 }
