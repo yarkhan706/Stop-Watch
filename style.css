@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: solid 1px;
+    padding: 10%;
+    display: grid;
+    grid-template-areas: 
+    "time time time"
+    "start pause reset";
+
+}
+
+.time{
+    grid-area: time;
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn{
+    border: 1px solid;
+    padding: 10px;
+}
